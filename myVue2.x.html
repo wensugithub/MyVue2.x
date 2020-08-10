@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!--<script src="../../lib/vue.js"></script>-->
+  <script src="commonUtils.js"></script>
+  <script src="Observer.js"></script>
+  <script src="myVue2.x_compile.js"></script>
+  <script src="myVue2.x.js"></script>
+</head>
+<body>
+<div id="app">
+  <h2>{{person.name}}--{{person.age}}</h2>
+  <h4>{{message}}</h4>
+  <div v-text="message"></div>
+  <div v-html="htmlStr"></div>
+  <input type="text" v-model="message" />
+</div>
+<script>
+  const app = new MyVue({
+    el: "#app",
+    data: {
+      person: {
+        name: "tom",
+        age: 20
+      },
+      message: "hello vue",
+      htmlStr: "<h2>hello html</h2>"
+    }
+  });
+</script>
+</body>
+</html>
