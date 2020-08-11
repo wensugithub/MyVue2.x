@@ -65,7 +65,7 @@ class Observer {
   defineReactive(obj, key, value) {
     // 递归遍历
     this.observe(value);
-    // 一个属性，对应一个Dep对象
+    // 每一个属性，对应一个Dep对象
     const dep = new Dep();
     Object.defineProperty(obj, key, {
       enumerable: true,
